@@ -1,0 +1,57 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+
+
+<div class="row" style="margin-top: 80px;">
+    <div class="col-6 mx-auto">
+
+    <form class="needs-validation" action="/products" method="POST" novalidate>
+        <div class="mb-3">
+            <label for="naam" class="form-label">Product Name:</label>
+            <input type="text" class="form-control" name="name" id="naam" placeholder="Enter Product Name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please choose a Product Name.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="imge" class="form-label">Product Image:</label>
+            <input type="text" class="form-control" name="image" id="imge" placeholder="Image" required>
+
+        </div>
+        <div class="mb-3">
+            <label for="paisa" class="form-label">Product Price:</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Rs. </span>
+            <input type="number" class="form-control" name="price" id="paisa" placeholder="Enter Product Price" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please choose a Product Price.
+            </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Product Desc:</label>
+            <textarea name="desc" class="form-control" id="desc" cols="25" rows="4" placeholder="Description" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please write a Product Description.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Add Product</button>
+      </form>
+    </div>
+</div>
+
+
+
+
+
+<%-include('../partials/footer')%>

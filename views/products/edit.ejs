@@ -1,0 +1,53 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+
+
+<div class="row" style="margin-top: 80px;">
+    <div class="col-6 mx-auto">
+
+<form   action="/products/<%=foundproduct._id%>?_method=PATCH" method="POST" class="needs-validation" novalidate>
+  
+    
+    <div class="mb-3">
+        <label for="naam" class="form-label">Product Name:</label>
+        <input type="text" class="form-control" name="name" id="naam" placeholder="Enter Product Name" value="<%=foundproduct.name%>" required >
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a Product Name.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="imge" class="form-label">Product Image:</label>
+        <input type="text" class="form-control" name="image" id="imge" placeholder="Image" value="<%=foundproduct.img%>" required>
+       
+    <div class="mb-3">
+        <label for="paisa" class="form-label">Product Price:</label>
+        <input type="number" class="form-control" name="price" id="paisa" placeholder="Enter Product Price" value="<%=foundproduct.price%>" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a Product Price.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">Product Desc:</label>
+        <textarea  class="form-control" name="desc" id="desc" cols="25" rows="4" placeholder="Description" required><%=foundproduct.desc%></textarea>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please write a Product Description.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-sm btn-success">Edit Product</button>
+</form>
+    </div>
+</div>
+
+
+
+<%-include('../partials/footer')%>
